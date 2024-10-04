@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class="container">
+    <h1>Health news</h1>
+    {% for news in cases.articles %}
+    <a class="hide" href="{{ news.url }}" target="_blank">
+        <div class="newbox">
+            <div class="img_div">
+                <img src="{{news.urlToImage or 'static/health.jpg'}}" alt="Image not found" height="250rem">
+            </div>
+            <div class="main_news">
+                <h3>{{ news.title }}</h3>
+                <h5>{{news.description}}</h5>
+                <h6>Published At: {{news.publishedAt}}</h6>
+            </div>
+    </a>
+</div>
+{% endfor %}
+</div>
+{% endblock body %}

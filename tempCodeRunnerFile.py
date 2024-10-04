@@ -1,0 +1,1 @@
+return render_template('sports.html',cases = case)
