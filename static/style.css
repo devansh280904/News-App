@@ -60,7 +60,6 @@ h6 {
 
 }
 
-
 .hide {
     text-decoration: none;
     color: inherit;
@@ -69,16 +68,36 @@ h6 {
     flex-direction: row;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
+}
+
+.hide:hover {
+    transform: translateY(-3px) scale(1.03); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 .img_div{
     width: 30%;
     margin-right: 15px;
 }
 @media screen and (max-width: 991px) {
-    .hide {
-        flex-direction: column;
-    }
     .img_div{
         width: 97.3%;
+    }
+    .hide {
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
+    }
+    
+    .hide:hover {
+        transform: translateY(-3px) scale(1.03); 
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+        background-color: rgba(255, 255, 255, 0.1);
     }
 }
